@@ -6,6 +6,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * JPA Entity class
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -16,7 +19,6 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
 
     @Column(name = "first_name")
     private String firstName;

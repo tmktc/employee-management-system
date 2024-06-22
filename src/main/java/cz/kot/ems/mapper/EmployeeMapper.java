@@ -3,6 +3,9 @@ package cz.kot.ems.mapper;
 import cz.kot.ems.dto.EmployeeDto;
 import cz.kot.ems.entity.Employee;
 
+/**
+ * Mapper - converts JPA entities into Dtos and vice versa
+ */
 public class EmployeeMapper {
 
     public static EmployeeDto mapToEmployeeDto(Employee employee) {
