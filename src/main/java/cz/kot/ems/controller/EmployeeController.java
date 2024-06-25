@@ -22,14 +22,14 @@ public class EmployeeController {
     // Build Add Employee REST API
     @PostMapping
     public ResponseEntity<EmployeeDto> createEmployee(@RequestBody EmployeeDto employeeDto) {
-        EmployeeDto savedEmployee =  employeeService.createEmployee(employeeDto);
+        EmployeeDto savedEmployee = employeeService.createEmployee(employeeDto);
         return new ResponseEntity<>(savedEmployee, HttpStatus.CREATED);
     }
 
     // Build Get Employee REST API
     @GetMapping("{id}")
     public ResponseEntity<EmployeeDto> getEmployeeById(@PathVariable("id") int employeeId) {
-        EmployeeDto employeeDto =  employeeService.getEmployeeById(employeeId);
+        EmployeeDto employeeDto = employeeService.getEmployeeById(employeeId);
         return ResponseEntity.ok(employeeDto);
     }
 
@@ -52,6 +52,6 @@ public class EmployeeController {
     @DeleteMapping("{id}")
     public ResponseEntity<String> deleteEmployee(@PathVariable("id") int employeeId) {
         employeeService.deleteEmployee(employeeId);
-        return ResponseEntity.ok("Employee with id '" + employeeId + "' was successfully deleted");
+        return ResponseEntity.ok("Employee with id '" + employeeId + "' has been successfully deleted");
     }
 }
